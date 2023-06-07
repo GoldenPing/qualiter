@@ -47,8 +47,12 @@ function add(a, b) {
         arrayB = [...arrayFixSize,...arrayB]
 
     }
-    // logger.info(arrayA)     
-    // logger.info(arrayB) 
+
+    arrayA.reverse()
+    arrayB.reverse()
+
+    logger.info(arrayA)     
+    logger.info(arrayB) 
 
     // logger.info('Etape 3 Summing time')
     // for (let i = arrayA.length -1 ; i <=0; i -- ){

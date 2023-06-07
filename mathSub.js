@@ -15,7 +15,7 @@ function sub(a,b) {
         return 0 
     }
 
-    // mock pour faire passer les tests stay calm
+    // mock pour faire passer les tests 
     return a - b
 }
 

@@ -1,0 +1,11 @@
+<ion-list>
+  <ion-item *ngFor="let item of items">{{item}}</ion-item>
+</ion-list>
+<ion-item>
+  <form #formAuth="ngForm" (ngSubmit)="addThings(formAuth)">
+
+    <ion-label position="floating">Things</ion-label>
+    <ion-input ngModel name="thing" type="text"></ion-input>
+    <ion-button type="submit" color="primary" expand="block">Add Things</ion-button>
+
+  </form>  </ion-item>
