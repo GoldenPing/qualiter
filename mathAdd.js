@@ -7,7 +7,7 @@ const logger = winston.createLogger({
 const sumSmallNumbers = require('./math')
 
 function add(a, b) {
-    logger.info('Etape 0 test cas easy')
+    // logger.info('Etape 0 test cas easy')
 
     if (typeof a !== 'number' || typeof b !== 'number') {
         throw new Error('Are you serious ????')
@@ -21,18 +21,18 @@ function add(a, b) {
     if (a < 0 && b < 0) {
         return - add(-a, -b)
     }
-    if(a === 0 || b === 0){
+    if(Math.abs(a) === 0 || Math.abs(a) === 0){
         return (a === 0) ? b : a
     }
 
-    logger.info('Etape 1 Split to array')
+    // logger.info('Etape 1 Split to array')
     let arrayA = a.toString().split('').filter(e => e !== '-')
     let arrayB = b.toString().split('').filter(e => e !== '-')
     // logger.info(arrayA)
     // logger.info(arrayB)
 
 
-    logger.info('Etape 2 fix size Array')
+    // logger.info('Etape 2 fix size Array')
     const diffSizeArray = arrayA.length - arrayB.length
     if(diffSizeArray < 0 ){
         // logger.info(arrayA)     
@@ -50,7 +50,7 @@ function add(a, b) {
     // logger.info(arrayA)     
     // logger.info(arrayB) 
 
-    logger.info('Etape 3 Summing time')
+    // logger.info('Etape 3 Summing time')
     // for (let i = arrayA.length -1 ; i <=0; i -- ){
     //     logger.info(i)
     //     logger.info(sumSmallNumbers(arrayA[i],arrayB[i]))
